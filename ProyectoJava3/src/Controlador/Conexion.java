@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 public class Conexion {
  private String user = "root";
  private String pass = "root";
- private String srv = "jdbc:mysql://localhost/ejercicioJava";
+ private String srv = "jdbc:mysql://localhost/Examen3";
 
     public String getUser() {
         return user;
