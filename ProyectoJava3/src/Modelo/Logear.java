@@ -38,7 +38,7 @@ public class Logear {
         this.contraseña = contraseña;
     }
     
-    public boolean ValLogin(usuario usr){
+    public boolean ValLogin(){
         connect = connSeg.getConnection();
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -48,20 +48,20 @@ public class Logear {
         
         try{
             ps = connect.prepareStatement(sql);
-            ps.setString(1, usr.);
+           
             rs = ps.executeQuery();
             
             if(rs.next()){
-                return rs.getInt(1);
+                
                 
             }
             
-            return 1;
-            
+          
         }catch(SQLException ex){
          Logger.getLogger(Logear.class.getName()).log(Level.SEVERE, null, ex);
-         return 1;
-        }  
+        }
+        return false;
+        
     }
     
    public int existeUsuario(String usuario){

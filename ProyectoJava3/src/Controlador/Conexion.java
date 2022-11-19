@@ -1,5 +1,7 @@
 package Controlador;
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Conexion {
     private Connection conn;
@@ -7,16 +9,17 @@ public class Conexion {
     private String user = "root";
     private String pass = "root";
     
-    public Conexion(){
+    public Conexion getConexion(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(url, user, pass);
         }
-        catch(Exception e){
-            System.out.println("Error Fatal"+e);
+        catch(ClassNotFoundException ex){
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+        }catch(SQLException ex){
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return (Conexion) conn;
     }
-    public Connection getConnection(){
-        return conn;
-    }
+
 }
