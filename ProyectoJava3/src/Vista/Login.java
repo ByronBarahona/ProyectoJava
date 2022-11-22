@@ -53,7 +53,12 @@ public class Login extends javax.swing.JFrame {
 
         BtnSalir.setText("Salir");
 
-        BtnUnete.setText("Unete");
+        BtnUnete.setText("Registrarce");
+        BtnUnete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnUneteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -82,8 +87,8 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(BtnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(44, 44, 44))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(BtnUnete, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(92, 92, 92)
+                .addComponent(BtnUnete, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -112,6 +117,11 @@ public class Login extends javax.swing.JFrame {
     private void BtnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIngresarActionPerformed
            
     }//GEN-LAST:event_BtnIngresarActionPerformed
+
+    private void BtnUneteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnUneteActionPerformed
+        new Registro().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_BtnUneteActionPerformed
 
     /**
      * @param args the command line arguments
