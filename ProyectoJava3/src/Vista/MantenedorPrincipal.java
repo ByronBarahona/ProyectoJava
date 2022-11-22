@@ -37,9 +37,9 @@ public class MantenedorPrincipal extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         MenuAdmGpg = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        MenuAdmPvr = new javax.swing.JMenuItem();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        MenuAdmLcr = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
@@ -75,12 +75,12 @@ public class MantenedorPrincipal extends javax.swing.JFrame {
         jMenu2.add(MenuAdmGpg);
         jMenu2.add(jSeparator2);
 
-        jMenuItem2.setText("Proveedores");
-        jMenu2.add(jMenuItem2);
+        MenuAdmPvr.setText("Proveedores");
+        jMenu2.add(MenuAdmPvr);
         jMenu2.add(jSeparator3);
 
-        jMenuItem3.setText("Linea de Credito");
-        jMenu2.add(jMenuItem3);
+        MenuAdmLcr.setText("Linea de Credito");
+        jMenu2.add(MenuAdmLcr);
 
         jMenuBar1.add(jMenu2);
 
@@ -131,7 +131,7 @@ public class MantenedorPrincipal extends javax.swing.JFrame {
 
     private void MenuAdmGpgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuAdmGpgActionPerformed
            new Pagador().setVisible(true);
-           
+           dispose();
     }//GEN-LAST:event_MenuAdmGpgActionPerformed
 
     /**
@@ -171,6 +171,8 @@ public class MantenedorPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem MenuAdmGpg;
+    private javax.swing.JMenuItem MenuAdmLcr;
+    private javax.swing.JMenuItem MenuAdmPvr;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -182,8 +184,6 @@ public class MantenedorPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuBar jMenuBar3;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
